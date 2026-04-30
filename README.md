@@ -1,3 +1,19 @@
+# CoinShift API (Laravel 11)
+
+Este es el backend de la plataforma CoinShift, encargado de la lógica de conversión de divisas.
+
+## Ejecución con Docker
+Para levantar este servicio de forma independiente:
+1. `docker build -t coinshift-api .`
+2. `docker run -d -p 8000:80 --name coinshift-api coinshift-api`
+3. `docker exec -it coinshift-api php artisan key:generate`
+
+> **Nota de Orquestación:** Para levantar el ecosistema completo (API + Frontend), asegúrese de que ambas carpetas estén en el mismo directorio raíz y ejecute:
+> ```bash
+> docker-compose up -d --build
+> ```
+
+---
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

@@ -1,0 +1,22 @@
+services:
+  api:
+    build: ./coinshift-api
+    container_name: coinshift-api
+    ports:
+      - "8000:80"
+    volumes:
+      - ./coinshift-api:/var/www/html
+    networks:
+      - coinshift-network
+
+  app:
+    build: ./coinshift-app
+    container_name: coinshift-app
+    ports:
+      - "4200:80"
+    networks:
+      - coinshift-network
+
+networks:
+  coinshift-network:
+    driver: bridge
